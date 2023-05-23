@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=IBM Plex Mono"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <title>PetFind</title>
+  </head>
+  <body>
+    <main>
+      <section id="menu">
+        <div id="image"><img src="petfind.png"/></div>
+        <span id="text">
+          <p><b>Name: </b>dog</p>
+          <p><b>Age: </b>6</p>
+          <p><b>Breed: </b>golden</p>
+          <p><b>Battery: </b><span id="battery_percent"></span>%</p>
+        </span>
+        <button onclick="loadMapLastLocation()" id="button-path">
+          Last Location
+        </button>
+        <button onclick="loadMapByDate()" id="button-path">
+          View Path
+        </button>
+        <div class="path">
+          <br /><br />
+          <div class="date-selector">
+            <label class="text">Start:</label>
+            <input type="date" id="date-ini" />
+          </div>
+          <br />
+          <div class="date-selector">
+            <label class="text">End:</label>
+            <input type="date" id="date-end" />
+          </div>
+        </div>
+      </section>
+      <section class="map-section">
+        <div id="map">
+          <script src="./main.js"></script>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
